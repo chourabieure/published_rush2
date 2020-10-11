@@ -1,0 +1,108 @@
+header{
+    max-width: 1400px;
+    margin: auto;
+}
+header .search-container{
+    max-width: 1200px;
+    margin: auto;
+}
+main{
+    max-width: 1200px;
+}
+
+.nav-item {
+    padding: 15.5px 15px 15.5px 15px;
+    -webkit-transition: background-color 300ms ease, color 300ms ease;
+    -moz-transition: background-color 300ms ease, color 300ms ease;
+    -o-transition: background-color 300ms ease, color 300ms ease;
+    -ms-transition: background-color 300ms ease, color 300ms ease;
+    transition: background-color 300ms ease, color 300ms ease;
+
+}
+.nav-item:hover{
+    transition: 300ms ease;
+    color: white;
+    background-color: black;
+}
+.search-input{
+    position: relative;
+}
+.search-input .input-group-text{
+    color: grey;
+    z-index: 100;
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    font-size: 13px;
+    top: 23px;
+    right: 20px;
+}
+.search-input .form-control{
+    height: 67px;
+    border-radius: 0;
+    border-bottom: none;
+    border-bottom: 3px solid black !important;
+
+}
+
+/*FOOTER*/
+.bas{
+    text-align: left;
+    padding:50px;
+}
+.bas .active{
+    background-color: black;
+    color:white;
+    padding: 11px 16px 11px 16px;
+}
+
+.bas a{
+    padding: 20px;
+}
+/* FIN FOOTER */
+main{
+    max-width: 1200px;
+    margin:auto;
+}
+
+main .card{
+    max-width: 286px;
+    margin: auto;
+}
+
+
+main .card .category{
+    color:gray;
+    font-size: 11px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+main .article-card .card{
+    border-radius: 4px;
+    background: #fff;
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    cursor: pointer;
+}
+
+main .article-card .card:hover{
+    z-index: 100;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+.search-container .search-icone{
+    display: flex;
+    align-items: center;
+    transition: 300ms ease;
+}
+
+.search-container .search-icone:hover{
+    transition: 300ms ease;
+    transform: scale(1.1);
+}
+.filter h4{
+    color: rgba(0,0,0,.4);
+    font-size: 13px;
+}
+
