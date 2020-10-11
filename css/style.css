@@ -67,7 +67,7 @@ nav li{
 
 }
 .search-input .input-group-text{
-    color: grey;
+    color: #1B1B1B;
     z-index: 100;
     position: absolute;
     border: none;
@@ -96,7 +96,7 @@ main .card{
 
 
 main .card .category{
-    color:gray;
+    color: #1B1B1B;
     font-size: 11px;
     padding-top: 5px;
     padding-bottom: 5px;
