@@ -3,8 +3,9 @@ window.onload = function(){
   }
   
   function isMobileDevice() {
-      return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    return false  
   };
+
   
    
   var li = new Array();
@@ -109,5 +110,12 @@ window.onload = function(){
     select_.onchange();
     salir_select(selc); 
   }
+
   
-  
+  $(document).ready(function () {
+
+    $('.third-button').on('click', function () {
+      $('.navbar').toggleClass('dark_class');
+      $('.animated-icon3').toggleClass('open');
+    });
+  });

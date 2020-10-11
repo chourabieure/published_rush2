@@ -10,8 +10,10 @@
       href="assets/image/logo.svg"
     />
     <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
 
     <!-- Bootstrap -->
     <link
@@ -35,6 +37,7 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 
     <!-- RESET -->
     <link rel="stylesheet" href="css/reset.css" />
@@ -47,20 +50,24 @@
     <!-- STYLE -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/drop_down.css" />
-
+    <link rel="stylesheet" href="css/collapse_button.css" />
+  
     <!-- JS -->
     <script src="js/main.js"></script>
+
+    <!-- FONTS -->
+    <link rel="stylesheet" href="https://use.typekit.net/ema7ufu.css">
   </head>
 
   <body>
     <header>
       <!-- Header desktop -->
-      <nav class="navbar navbar-expand-lg p-0">
-        <a class="navbar-brand p-0 m-0" href="#"
+      <nav class="navbar navbar-expand-md p-0">
+        <a class="navbar-brand p-0 m-0" href="index.html"
           ><img src="assets/image/logo.svg" alt="Website logo"
         /></a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler third-button"
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
@@ -68,7 +75,7 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+        <div class="animated-icon3"><span></span><span></span><span></span></div>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -84,16 +91,21 @@
             </li>
           </ul>
 
-          <div class="mr-5">
-            <a href="" class="pr-4"><i class="fas fa-shopping-cart"></i></a>
-            <a href="login.html">Login</a>
-          </div>
+          <li class="nav-item">
+            <a class="nav-link" href="test.html"><i class="fas fa-shopping-cart"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="test.html">LOGIN</a>
+          </li>
         </div>
+
       </nav>
 
       <div class="search-container container-fluid mt-4">
         <div class="row">
-          <div class="search-icone col-lg-1 d-lg-flex d-md-none d-sm-none d-none">
+          <div
+            class="search-icone col-lg-1 d-lg-flex d-md-none d-sm-none d-none"
+          >
             <a class="p-0" href="#"
               ><img
                 class="m-0"
@@ -102,7 +114,9 @@
             /></a>
           </div>
 
-          <div class="search-input input-group col-lg-8 col-md-9 col-sm-12 col-12">
+          <div
+            class="search-input input-group col-lg-8 col-md-9 col-sm-12 col-12"
+          >
             <input
               type="text"
               class="form-control border-0 p-0"
@@ -115,21 +129,28 @@
             </div>
           </div>
           <div class="best-match col-lg-3 col-md-3 col-sm-12 col-12">
-             <!-- Custom select structure --> 
-          <div class="select_mate" data-mate-select="active" >
-            <select name="" onchange="" onclick="return false;" id="">
-              <option value="" >Best Match</option>
-              <option value="1">Popular</option>
-            </select>
-            <p class="selecionado_opcion"  onclick="open_select(this)" ></p><span onclick="open_select(this)" class="icon_select_mate" ><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
-                <path d="M0-.75h24v24H0z" fill="none"/>
-            </svg></span>
-            <div class="cont_list_select_mate">
-              <ul class="cont_select_int">  </ul> 
+            <!-- Custom select structure -->
+            <div class="select_mate" data-mate-select="active">
+              <select name="" onchange="" onclick="return false;" id="">
+                <option value="">Best Match</option>
+                <option value="1">Popular</option>
+              </select>
+              <p class="selecionado_opcion" onclick="open_select(this)"></p>
+              <span onclick="open_select(this)" class="icon_select_mate"
+                ><svg
+                  fill="#000000"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+                  <path d="M0-.75h24v24H0z" fill="none" /></svg></span>
+              <div class="cont_list_select_mate">
+                <ul class="cont_select_int"></ul>
+              </div>
             </div>
-          </div>
-          <!-- Custom select structure --> 
+            <!-- Custom select structure -->
           </div>
         </div>
       </div>
@@ -138,54 +159,86 @@
     <main>
       <div class="container-fluid mt-5">
         <div class="row">
-          <div class="filter col-lg-3 col-md-4 col-sm-6 d-xs-none">
+          <div class="filter mb-5 col-lg-3 col-md-4 col-sm-6"
+          >
             <h4 class="mb-4">FILTER BY</h4>
-              <!-- Custom select structure --> 
-          <div class="select_mate" data-mate-select="active" >
-            <select name="" onchange="" onclick="return false;" id="">
-              <option value="" >Collection</option>
-              <option value="1">Popular</option>
-            </select>
-            <p class="selecionado_opcion"  onclick="open_select(this)" ></p><span onclick="open_select(this)" class="icon_select_mate" ><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
-                <path d="M0-.75h24v24H0z" fill="none"/>
-            </svg></span>
-            <div class="cont_list_select_mate">
-              <ul class="cont_select_int">  </ul> 
-            </div>
-          </div>
-          <!-- Custom select structure --> 
-            <!-- Custom select structure --> 
-            <div class="select_mate" data-mate-select="active" >
+            <!-- Custom select structure -->
+            <div class="select_mate" data-mate-select="active">
               <select name="" onchange="" onclick="return false;" id="">
-                <option value="" >Color</option>
+                <option value="">Collection</option>
                 <option value="1">Popular</option>
               </select>
-              <p class="selecionado_opcion"  onclick="open_select(this)" ></p><span onclick="open_select(this)" class="icon_select_mate" ><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
-                  <path d="M0-.75h24v24H0z" fill="none"/>
-              </svg></span>
+              <p class="selecionado_opcion" onclick="open_select(this)"></p>
+              <span onclick="open_select(this)" class="icon_select_mate"
+                ><svg
+                  fill="#000000"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+                  <path d="M0-.75h24v24H0z" fill="none" /></svg></span>
               <div class="cont_list_select_mate">
-                <ul class="cont_select_int">  </ul> 
+                <ul class="cont_select_int"></ul>
               </div>
             </div>
-            <!-- Custom select structure --> 
-              <!-- Custom select structure --> 
-          <div class="select_mate" data-mate-select="active" >
-            <select name="" onchange="" onclick="return false;" id="">
-              <option value="" >Category</option>
-              <option value="1">Popular</option>
-            </select>
-            <p class="selecionado_opcion"  onclick="open_select(this)" ></p><span onclick="open_select(this)" class="icon_select_mate" ><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
-                <path d="M0-.75h24v24H0z" fill="none"/>
-            </svg></span>
-            <div class="cont_list_select_mate">
-              <ul class="cont_select_int">  </ul> 
+            <!-- Custom select structure -->
+            <!-- Custom select structure -->
+            <div class="select_mate" data-mate-select="active">
+              <select name="" onchange="" onclick="return false;" id="">
+                <option value="">Color</option>
+                <option value="1">Popular</option>
+              </select>
+              <p class="selecionado_opcion" onclick="open_select(this)"></p>
+              <span onclick="open_select(this)" class="icon_select_mate"
+                ><svg
+                  fill="#000000"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+                  <path d="M0-.75h24v24H0z" fill="none" /></svg></span>
+              <div class="cont_list_select_mate">
+                <ul class="cont_select_int"></ul>
+              </div>
             </div>
+            <!-- Custom select structure -->
+            <!-- Custom select structure -->
+            <div class="select_mate mb-2" data-mate-select="active">
+              <select name="" onchange="" onclick="return false;" id="">
+                <option value="">Category</option>
+                <option value="1">Popular</option>
+              </select>
+              <p class="selecionado_opcion" onclick="open_select(this)"></p>
+              <span onclick="open_select(this)" class="icon_select_mate"
+                ><svg
+                  fill="#000000"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+                  <path d="M0-.75h24v24H0z" fill="none" /></svg></span>
+              <div class="cont_list_select_mate">
+                <ul class="cont_select_int"></ul>
+              </div>
+            </div>
+            <!-- Custom select structure -->
+            
+
+            <!-- RANGE-->
+
+            <h7>Price Range</h7>
+            <img src="assets/image/rang.png" alt="range"/>
+
+
+
           </div>
-          <!-- Custom select structure --> 
-          </div>
+
 
           <div class="article-card col-lg-3 col-md-4 col-sm-6 pb-5">
             <div class="card p-0 border-0">
@@ -373,19 +426,18 @@
         </div>
       </div>
     </main>
-    <footer>
-      <div class="bas">
-        <a class="active">1</a>
-        <a>2</a>
-        <a>3</a>
-        <a>4</a>
-        <a>5</a>
-        <a>6</a>
-        <a>7</a>
-        <a>8</a>
-        <a>9</a>
-        <a>10</a>
-        <a>></a>
+    <footer class="container-fluid mb-5 mt-5 d-flex">
+      <div>
+        <a class="active" href="">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        <a class="d-none d-lg-inline d-md-inline d-sm-inline" href="">5</a>
+        <a class="d-none d-lg-inline d-md-inline d-sm-inline" href="">6</a>
+        <a class="d-none d-lg-inline d-md-inline" href="">7</a>
+        <a class="d-none d-lg-inline d-md-inline" href="">8</a>
+        <a class="d-none d-lg-inline d-md-inline" href="">9</a>
+        <a href=""><i class="fas fa-chevron-right"></i></a>
       </div>
     </footer>
   </body>

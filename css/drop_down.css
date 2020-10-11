@@ -17,7 +17,7 @@
     font-weight: 300;
     background-color: #fff;
     border-radius: 3px;
-    transition: all 375ms ease-in-out;
+    transition: all 300ms ease-in-out;
    /* Oculto el elemento select */
 }
 .select_mate select {
@@ -35,7 +35,7 @@
 .cont_select_int {
     position: absolute;
     left: 0px;
-    top: 0px;
+    top: 3px;
     z-index: 999;
     overflow: hidden;
     height: 0px;
@@ -46,7 +46,7 @@
     margin-top: 0px;
     border-radius: 0px 0px 3px 3px;
     box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.2);
-    transition: all 375ms ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 .cont_select_int li {
     position: relative;
@@ -77,19 +77,21 @@
     margin: 0px;
     cursor: pointer;
     padding-top: 23px;
-    padding-bottom: 20px;
-
+    padding-bottom: 17px;
+    border-bottom: 3px solid #1B1B1B;
+    transition: all 300ms ease-in-out;
+    z-index: 100;
 
 }
-.selecionado_opcion:hover, .selecionado_opcion:focus{
-    
-    padding-bottom: 17px;
-    border-bottom: 3px solid black;
+
+.selecionado_opcion:hover{
+    transform: scale(1.05);
 }
 .filter .select_mate{
     width: 100%;
     min-width: 100%;
     border-bottom: none;
+    
 }
 .filter .selecionado_opcion{
     margin-right: 0 !important;

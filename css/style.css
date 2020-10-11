@@ -1,3 +1,9 @@
+*{
+    font-family: nunito, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 header{
     max-width: 1400px;
     margin: auto;
@@ -17,15 +23,48 @@ main{
     -o-transition: background-color 300ms ease, color 300ms ease;
     -ms-transition: background-color 300ms ease, color 300ms ease;
     transition: background-color 300ms ease, color 300ms ease;
+    text-decoration: none;
+    list-style: none;
+    color:#1B1B1B;
 
 }
 .nav-item:hover{
     transition: 300ms ease;
     color: white;
-    background-color: black;
+    background-color: #1B1B1B;
 }
+
+nav li{
+    text-align: center;
+    
+}
+.navbar{
+    box-shadow: none !important;
+}
+
+.dark_class{
+    background-color: #1B1B1B;
+}
+.dark_class .nav-item{
+    color: white;
+    background-color: #1B1B1B;
+}
+.dark_class .nav-item:hover{
+    background-color: white;
+    color: #1B1B1B;
+}
+
+
+
+
 .search-input{
     position: relative;
+    transition: all 375ms ease-in-out;
+
+}
+.search-input:hover{
+    transform: scale(1.03);
+
 }
 .search-input .input-group-text{
     color: grey;
@@ -41,25 +80,10 @@ main{
     height: 67px;
     border-radius: 0;
     border-bottom: none;
-    border-bottom: 3px solid black !important;
+    border-bottom: 3px solid #1B1B1B !important;
 
 }
 
-/*FOOTER*/
-.bas{
-    text-align: left;
-    padding:50px;
-}
-.bas .active{
-    background-color: black;
-    color:white;
-    padding: 11px 16px 11px 16px;
-}
-
-.bas a{
-    padding: 20px;
-}
-/* FIN FOOTER */
 main{
     max-width: 1200px;
     margin:auto;
@@ -106,3 +130,30 @@ main .article-card .card:hover{
     font-size: 13px;
 }
 
+footer a{
+    padding: 15px 20px;
+    transition: all 300ms ease-in-out;
+
+}
+
+footer .active{
+
+    color: white;
+    background-color: #1B1B1B;
+}
+
+footer a:hover{
+    color: white;
+    background-color: #1B1B1B;
+
+}
+
+footer>div{
+    margin: auto;
+}
+
+
+
+
+
+ 
